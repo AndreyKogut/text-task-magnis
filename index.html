@@ -9,18 +9,30 @@
   <title>Calendar</title>
 </head>
 <body>
-  <form onsubmit="initCalendar(event, year.value, month.value)">
-    <label>
+  <form onsubmit="initCalendar(event, year.value, month.value)" class="form">
+    <label class="form-label">
       Year:
-      <input type="text" name="year">
+      <input
+        type="text"
+        name="year"
+        class="reset-default form-input"
+        pattern="^[1,2][0-9][0-9][0-9]$"
+        required
+        placeholder="2018">
     </label>
-    <label>
+    <label class="form-label">
       Month:
-      <input type="text" name="month">
+      <input
+        type="text"
+        name="month"
+        class="reset-default form-input"
+        required
+        placeholder="12"
+        pattern="^([0,1][0,1,2])$|^[1-9]$">
     </label>
-    <input type="submit" value="Initialize">
+    <input type="submit" value="Initialize" class="form-submit">
   </form>
-  <div id="calendar"></div>
+  <div id="calendar" class="table"></div>
   <script src="./index.js"></script>
 </body>
 </html>

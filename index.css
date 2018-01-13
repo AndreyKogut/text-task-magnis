@@ -1,0 +1,7 @@
+.table-row {
+  display: flex;
+}
+
+.table-cell {
+  flex: 1;
+}
